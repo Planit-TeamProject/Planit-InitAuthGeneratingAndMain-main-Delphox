@@ -1,5 +1,6 @@
 import React from 'react';
 import './LandingPage.css';
+import HeroShowcase from './HeroShowcase';
 
 /**
  * 초기화면 (랜딩 페이지)
@@ -53,24 +54,28 @@ export default function LandingPage({ onNavigate }) {
         </div>
       </nav>
 
-      <section className="hero">
-        <div className="eyebrow">AI 학습 플래너</div>
-        <h1>
-          나에게 맞는 학습 계획을
-          <br />
-          AI가 직접 만들어드려요
-        </h1>
-        <h4>
-          목차 사진 한 장이면 충분해요. 시험일과 하루 가능 시간만 알려주면{' '}
-          <br />
-          AI가 현실적인 학습 일정을 세우고, 밀리면 알아서 다시 짜드려요.
-        </h4>
-        <div className="hero-actions">
-          <button className="btn btn-white" onClick={scrollToFeatures}>
-            더 알아보기 ↓
-          </button>
-        </div>
-      </section>
+      <div className="hero-row">
+        <section className="hero">
+          <div className="eyebrow">AI 학습 플래너</div>
+          <h1>
+            나에게 맞는 학습 계획을
+            <br />
+            AI가 직접 만들어드려요
+          </h1>
+          <h4>
+            목차 사진 한 장이면 충분해요. 시험일과 하루 가능 시간만 알려주면{' '}
+            <br />
+            AI가 현실적인 학습 일정을 세우고, 밀리면 알아서 다시 짜드려요.
+          </h4>
+          <div className="hero-actions">
+            <button className="btn btn-white" onClick={scrollToFeatures}>
+              더 알아보기 ↓
+            </button>
+          </div>
+        </section>
+
+        <HeroShowcase />
+      </div>
 
       <section className="section" id="feat">
         <div className="section-inner">
